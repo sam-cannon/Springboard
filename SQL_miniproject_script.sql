@@ -58,11 +58,10 @@ more than $100? Return the name and monthly maintenance of the facilities
 in question. */
 SELECT 
     name,
-    monthlymaintenance,
     CASE
         WHEN monthlymaintenance > 100 THEN 'expensive'
         ELSE 'cheap'
-    END
+    END AS monthlymaintenance
 FROM
     Facilities
 
